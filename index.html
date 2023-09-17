@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>WEATHER APP</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navBar">
+            <h1>WEATHER APP</h1>
+            <div class="search_container">
+                <input type="text" class="search_input" id="search" placeholder="Search for City, Country..."
+                    list="cities" oninput="cityFilter()">
+                <datalist id="cities">
+                    <!-- here will be the autocomplete data-->
+                </datalist>
+                <img class="search_icon" src="./images/sol.png" alt="icono del sol">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="mainContainer">
+            <div class="weatherData">
+                <div class="default_info">
+                    Did you know that disaster risk reduction, human health protection, water resource management,
+                    glacier
+                    monitoring, food production, tourism and transportation activities become more efficient thanks to
+                    timely and constant climate and weather information prediction? <br><br>
+
+                    Access real-time weather data, geographic location, weather forecast and more. Search by city or
+                    country
+                    of interest. <a href="#search" style="padding-left:5px ;">HERE!</a>
+                </div>
+            </div>
+            <div class=map>
+                <iframe id="google_maps" style="border-radius: 20px; opacity: 0.9;  box-shadow: 1px 1px 40px white;"
+                    src="https://maps.google.com/maps?q=&t=&z=9&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                    scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
