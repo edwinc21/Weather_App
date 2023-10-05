@@ -6,7 +6,7 @@ const datalist = document.querySelector('#cities');
 const ubication = document.querySelector('#google_maps');
 
 // initialize variable
-const ApiKey = 'b3c1a5b83bba41d9b6a163408233008'  // Apikey the www.weatherapi.com
+const ApiKey = 'b09fa731747f4a8faaf220308230410'  // Apikey the www.weatherapi.com
 let counter = 0;   
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'Octuber', 'November', 'December'];
@@ -16,7 +16,7 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 function cityFilter() {
     counter++  // I count the times the function is called
     if (counter >= 4) {
-        fetch(`http://api.weatherapi.com/v1/search.json?key=b3c1a5b83bba41d9b6a163408233008&q=${search_input.value}`)
+        fetch(`http://api.weatherapi.com/v1/search.json?key=${ApiKey}&q=${search_input.value}`)
             .then(response => response.json())
             .then(data => {
                 datalist.innerHTML = '';
